@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First HTML Page</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            color: black;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            color: green;
+        }
+
+        p {
+            color: blue;
+            font-size: 1.2em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+    
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color: red;">Emilia Vuorinen</h1>
+
+    <p>
+        My name is Emilia Vuorinen. My favorite hobby is reading.
+    </p>
+
+    <img src="images/DSC00151.JPG" alt="Picture of me">
+
+    <h2>My Hobbies</h2>
+    <ol>
+        <li>Running</li>
+        <li>Watching movies</li>
+        <li>Reading</li>
+    </ol>
+
+    <h2>My Favorite Website</h2>
+    <p>
+        <a href="https://www.netflix.com/fi/" target="_blank">Netflix</a>
+    </p>
+
+    <h2>My Ongoing Courses</h2>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Digital marketing and sales</td>
+            <td>In Progress</td>
+        </tr>
+        <tr>
+            <td>Introduction to information security</td>
+            <td>Completed</td>
+        </tr>
+        <tr>
+            <td>AWS cloud fundamentals</td>
+            <td>In Progress</td>
+        </tr>
+    </table>
+
+    <h2>Contact Form</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>

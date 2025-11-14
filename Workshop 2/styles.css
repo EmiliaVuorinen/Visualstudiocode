@@ -1,0 +1,17 @@
+img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+ol li, ul li {
+    color: #333;
+}
+
+a {
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

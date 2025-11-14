@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First HTML Page</title>
+
+    <style>
+        .transition-button {
+            background-color: lightblue;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .transition-button:hover {
+            background-color: lightcoral;
+        }
+
+        .animation-box {
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            position: relative;
+            animation: move 2s infinite alternate;
+            margin-top: 20px;
+        }
+        @keyframes move {
+            from { left: 0; }
+            to { left: 100px; }
+        }
+        .pseudo-list li:nth-child(odd) {
+            background-color: lightgray;
+        }
+        .pseudo-list li:nth-child(even) {
+            background-color: white;
+        }
+
+        .filter-image {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .filter-image:hover {
+            filter: grayscale(0%);
+        }
+        .quote {
+            position: relative;
+            padding-left: 20px;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        .quote::before {
+            content: '“';
+            font-size: 40px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: red;">Emilia Vuorinen</h1>
+
+    <p>
+        My name is Emilia Vuorinen. My favorite hobby is reading.
+    </p>
+
+    <img src="DSC00151.JPG" alt="Picture of me" width="200" class="filter-image">
+
+    <h2>My Hobbies</h2>
+    <ol>
+        <li>Running</li>
+        <li>Watching movies</li>
+        <li>Reading</li>
+    </ol>
+
+    <h2>My Favorite Website</h2>
+    <p>
+        <a href="https://www.netflix.com/fi/" target="_blank">Netflix</a>
+    </p>
+
+    <h2>My Ongoing Courses</h2>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Digital marketing and sales</td>
+            <td>In Progress</td>
+        </tr>
+        <tr>
+            <td>Introduction to information security</td>
+            <td>Completed</td>
+        </tr>
+        <tr>
+            <td>AWS cloud fundamentals</td>
+            <td>In Progress</td>
+        </tr>
+    </table>
+
+    <h2>Contact Form</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Transition Button</h2>
+    <button class="transition-button">Hover me</button>
+
+    <h2>Animation Box</h2>
+    <div class="animation-box"></div>
+
+    <h2>Pseudo-class List</h2>
+    <ul class="pseudo-list">
+        <li>Running</li>
+        <li>Watching movies</li>
+        <li>Reading</li>
+        <li>Sleeping</li>
+    </ul>
+
+    <h2>Quote with Pseudo-element</h2>
+    <blockquote class="quote">
+        Learning is fun.
+    </blockquote>
+
+</body>
+</html>
+
