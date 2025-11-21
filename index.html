@@ -1,1 +1,156 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Workshop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    /* Flexbox */
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .box {
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+      width: 100px;
+    }
+
+    /* Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      margin: 20px;
+    }
+
+    .grid-item {
+      background-color: lightgreen;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Media Queries */
+    .responsive-box {
+      padding: 20px;
+      text-align: center;
+      margin: 20px;
+      color: white;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .responsive-box {
+        background-color: lightcoral;
+      }
+    }
+
+    @media (min-width: 601px) {
+      .responsive-box {
+        background-color: lightseagreen;
+      }
+    }
+
+    /* Semantic elements styling */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#layouts">Layouts</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>My name is Emilia Vuorinen.</p>
+    </section>
+
+    <section id="layouts">
+      <h2>Flexbox Layout</h2>
+      <div class="flex-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+
+      <h2>Grid Layout</h2>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Responsive Box</h2>
+      <div class="responsive-box">
+        Resize the window to see the effect
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: example@email.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright 2025</p>
+  </footer>
+
+</body>
+</html>
