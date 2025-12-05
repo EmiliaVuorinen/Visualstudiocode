@@ -1,156 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Layout Workshop</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  <title>Workshop 6 - Bootstrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    h2 {
-      margin-top: 40px;
-    }
-
-    /* Flexbox */
-    .flex-container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      margin: 20px;
-    }
-
-    .box {
-      background-color: lightblue;
-      padding: 20px;
-      text-align: center;
-      width: 100px;
-    }
-
-    /* Grid */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
-      margin: 20px;
-    }
-
-    .grid-item {
-      background-color: lightgreen;
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* Media Queries */
-    .responsive-box {
-      padding: 20px;
-      text-align: center;
-      margin: 20px;
-      color: white;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      .responsive-box {
-        background-color: lightcoral;
-      }
-    }
-
-    @media (min-width: 601px) {
-      .responsive-box {
-        background-color: lightseagreen;
-      }
-    }
-
-    /* Semantic elements styling */
-    header {
-      background-color: #333;
-      color: white;
-      padding: 15px;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 20px;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 40px;
-    }
-  </style>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
 </head>
 <body>
 
-  <header>
-    <h1>My Website</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#layouts">Layouts</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Emilia Vuorinen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>My name is Emilia Vuorinen.</p>
-    </section>
-
-    <section id="layouts">
-      <h2>Flexbox Layout</h2>
-      <div class="flex-container">
-        <div class="box">Box 1</div>
-        <div class="box">Box 2</div>
-        <div class="box">Box 3</div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-      <h2>Grid Layout</h2>
-      <div class="grid-container">
-        <div class="grid-item">1</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
+  <div class="container mt-5">
+
+    <div class="alert alert-warning" role="alert">
+      This page is a work in progress!
+    </div>
+
+    <div class="row mb-4 text-center">
+      <div class="col-md-4 col-12 p-3 bg-light border">Info</div>
+      <div class="col-md-4 col-12 p-3 bg-light border">More Info</div>
+      <div class="col-md-4 col-12 p-3 bg-light border">Even More Info</div>
+    </div>
+
+    <div class="mb-4 text-center">
+      <button class="btn btn-primary">Click Me</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-danger">Danger</button>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <img src="DSC00151.JPG" class="card-img-top" alt="Picture of me">
+        <div class="card-body">
+          <h5 class="card-title">Me</h5>
+          <p class="card-text">
+            This is a picture of me.
+          </p>
+          <a href="#" class="btn btn-primary">Learn More About Me</a>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <section>
-      <h2>Responsive Box</h2>
-      <div class="responsive-box">
-        Resize the window to see the effect
-      </div>
-    </section>
+  </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: example@email.com</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Copyright 2025</p>
-  </footer>
-
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
 </body>
 </html>
